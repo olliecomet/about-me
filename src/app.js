@@ -52,7 +52,7 @@ quizButton.onclick = function() {
     alert(`Congrats! You have completed the quiz, ${name}.`);
 
     //showing how many questions the user got correct
-    let response = 'Your name is ' + name;
+    let response = `${name}, you got ${correctAnswers}/3 correct `;
 
     if(correctAnswers >= 1) {
         response += ' and you know about Ollie!';
