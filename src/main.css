@@ -1,0 +1,19 @@
+h1, h2,
+h3 {
+    font-family: Georgia;
+}
+
+body {
+    font-family: Arial;
+    font-size: 16px;
+    background-color: #a8c5ba;
+}
+
+img {
+    height: 200px;
+    width: 350px;
+}
+
+p {
+    width: 750px;
+}
