@@ -29,7 +29,7 @@ guessButton.addEventListener('click', () => {
         guessButton.disabled = true;
     }
     else if(result === -1) {
-        tooHighLow.textContent = ('Your guess was too low!')
+        tooHighLow.textContent = ('Your guess was too low!');
 
         tries -= 1;
 
