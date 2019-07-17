@@ -14,4 +14,4 @@ global.URLSearchParams = window.URLSearchParams;
 global.URL = window.URL;
 
 require = require('esm')(module);
-module.exports = require('./is-yes.test.js/index.js');
+module.exports = require('./index.js');
