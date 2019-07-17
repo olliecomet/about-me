@@ -22,4 +22,5 @@ nav {
     background-color: #5fc45f;
     margin: 10px 0;
     padding: 5px;
+    max-width: 100%;
 }
