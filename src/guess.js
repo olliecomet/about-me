@@ -8,6 +8,7 @@ const tooHighLow = document.getElementById('too-high-low');
 const winOrLoss = document.getElementById('win-or-loss');
 const winImage = document.getElementById('win-image');
 const lossImage = document.getElementById('loss-image');
+const guesses = document.getElementById('guesses');
 
 // initialized states
 const correctNumber = 8;
@@ -30,8 +31,10 @@ guessButton.addEventListener('click', () => {
     }
     else if(result === -1) {
         tooHighLow.textContent = ('Your guess was too low!');
-
+        
         tries -= 1;
+
+        guesses.textContent = (tries);
 
         if(tries === 0) {
             winOrLoss.textContent = ('You lost!');
@@ -43,8 +46,10 @@ guessButton.addEventListener('click', () => {
     }
     else if(result === 1) {
         tooHighLow.textContent = ('Your guess was too high!');
-
+        
         tries -= 1;
+
+        guesses.textContent = (tries);
 
         if(tries === 0){
             winOrLoss.textContent = ('You lost!');
