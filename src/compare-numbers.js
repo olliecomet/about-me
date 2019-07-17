@@ -1,12 +1,12 @@
 const compareNumbers = function(guess, correctNumber) {
     if(guess === correctNumber) {
-        return true;
+        return 0;
     }
-    else if(guess >= correctNumber) {
-        return false;
-    } 
-    else if(guess <= correctNumber) {
-        return false;
+    else if(guess < correctNumber) {
+        return -1;
+    }
+    else if(guess > correctNumber) {
+        return 1;
     }
 };
 
