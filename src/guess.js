@@ -22,7 +22,6 @@ guessButton.addEventListener('click', () => {
 
     // conditions to determine if user wins or loses
     if(result === 0) {
-        
         winOrLoss.textContent = ('You got it!');
 
         winImage.classList.remove('hidden');

@@ -1,0 +1,17 @@
+img {
+    width: 200px;
+    height: 175px;
+}
+
+input {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    
+}
+
+input:checked + .hand-image{
+    border: 4px solid orange;
+}
