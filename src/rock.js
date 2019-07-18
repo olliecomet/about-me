@@ -23,7 +23,7 @@ button.addEventListener('click', () => {
     let record;
 
     if(handButton.value === hand) {
-        
+
         record = 'draw';
     }
     else if(handButton.value === 'rock' && hand === 'scissors' || 
@@ -40,18 +40,18 @@ button.addEventListener('click', () => {
     }
 
     if(record === 'draw') {
-        message.textContent('It was a draw...');
+        message.textContent = 'It was a draw...';
         draws++;
-        drawCount.textContent(draws);
+        drawCount.textContent = draws;
     }
     else if(record === 'won') {
-        message.textContent('You won!');
+        message.textContent = 'You won!';
         wins++;
-        winCount.textContent(wins);
+        winCount.textContent = wins;
     }
     else if(record === 'lost') {
-        message.textContent('You lost!');
+        message.textContent = 'You lost!';
         losses++;
-        lossCount.textContent(losses);
+        lossCount.textContent = losses;
     }
 });
