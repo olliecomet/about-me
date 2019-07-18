@@ -1,6 +1,7 @@
 img {
     width: 200px;
     height: 175px;
+    margin: 4px;
 }
 
 input {
@@ -18,4 +19,21 @@ input:checked + .hand-image{
 
 .invisible {
     display: none;
+}
+
+span {
+    font-weight: bold;
+}
+
+.record {
+    color: orange;
+}
+
+#win-count, #loss-count,
+#draw-count {
+    color: rgb(97, 97, 97);
+}
+
+#message {
+    font-weight: normal;
 }
