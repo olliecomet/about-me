@@ -1,5 +1,9 @@
 export default function getThrow() {
+    const number = Math.floor(Math.random() * 3);
 
+    const hand = getThrowFromNumber(number);
+
+    return hand;
 }
 
 export function getThrowFromNumber(number) {
