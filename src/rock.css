@@ -1,0 +1,39 @@
+img {
+    width: 200px;
+    height: 175px;
+    margin: 4px;
+}
+
+#number{
+    width: 45px;
+}
+
+label {
+    cursor: pointer;
+    
+}
+
+input:checked + .hand-image{
+    border: 4px solid orange;
+}
+
+.invisible {
+    display: none;
+}
+
+span {
+    font-weight: bold;
+}
+
+.record {
+    color: orange;
+}
+
+#win-count, #loss-count,
+#draw-count {
+    color: rgb(97, 97, 97);
+}
+
+#message {
+    font-weight: normal;
+}

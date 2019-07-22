@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Rock Paper Scissors Game</title>
+        <link rel="stylesheet" type="text/css" href="./src/main.css">
+        <link rel="stylesheet" type="text/css" href="./src/rock.css">
+    </head>
+    <body>
+        <header>
+            <h1>Rock, Paper, Scissors, Shoot!</h1>
+
+            <nav>
+                <a href="./">Home</a>
+                <a href="guess.html">Number Game</a>
+                <a href="rock.html">RPS Game</a>
+            </nav>
+        </header>
+
+        <section>
+            <h2>Rules:</h2>
+
+            <ul>
+                <li>Paper beats rock</li>
+                <li>Rock beats scissors</li>
+                <li>Scissors beats paper</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Record:</h3>
+
+            <p>
+                <span class="record">Wins: <span id="win-count">0</span></span>
+            </p>
+
+            <p>
+                <span class="record">Losses: <span id="loss-count">0</span></span>
+            </p>
+
+            <p>
+                <span class="record">Draws: <span id="draw-count">0</span></span>
+            </p>
+        </section>
+
+        <section>
+            <h2>Select Your Hand!</h2>
+
+            <label>
+                <input class="invisible" type="radio" name="hand" value="rock"
+                    checked>
+                <img class="hand-image" src="assets/rock.jpg">
+            </label>
+
+            <label>
+                <input class="invisible" type="radio" name="hand" value="paper">
+                <img class="hand-image" src="assets/paper.jpg">
+            </label>
+
+            <label>
+                <input class="invisible" type="radio" name="hand"
+                    value="scissors">
+                <img class="hand-image" src="assets/scissors.jpg">
+            </label>
+        </section>
+
+        <section>
+            <h3>Place A Bet?</h3>
+
+            <p>
+                <span>Wallet: $<span id="money">180</span></span>
+            </p>
+
+            <label>
+                <input id="number" type="number" name="number" min="1"
+                    max="180">
+            </label>
+
+            <p>
+                <button id="button">Shoot!</button>
+            </p>
+
+            <p>
+                <span id="message"></span>
+            </p>
+
+            <p>
+                <img id="hand-image" class="invisible" src="assets/rock.jpg">
+            </p>
+        </section>
+
+        <script type="module" src="src/rock.js"></script>
+    </body>
+</html>
