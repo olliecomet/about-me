@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" type="text/css" href="./src/main.css">
+    <link rel="stylesheet" type="text/css" href="./src/guess.css">
+</head>
+<body>
+    <header>
+        <h1>Guess A Number!</h1>
+
+        <nav>
+            <a href="./">Home</a>
+            <a href="guess.html">Number Game</a>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Rules</h1>
+
+        <p>
+            You have 4 chances to guess a number between 1 and 20.
+            You will recieve a hint if your guess is too high or low.
+        </p>
+    </section>
+
+    <section>
+        <p>
+            Guesses Remaining: <span id="guesses">4</span>
+        </p>
+            <input id="number" type="number" name="number" min="1" max="20">
+
+            <button id="guess-button">Guess!</button>
+        <p>
+            <span id="too-high-low"></span>
+        </p>
+    </section>
+
+    <section>    
+        <p>
+            <span id="win-or-loss"></span>
+        </p> 
+
+        <p>
+            <img id="win-image" class="hidden" src="./assets/win.jpg">
+        </p>
+
+        <p>
+            <img id="loss-image" class="hidden" src="./assets/lose.jpg">
+        </p>
+    </section>
+
+    <script type="module" src="src/guess.js"></script>
+</body>
+</html>
