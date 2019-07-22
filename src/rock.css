@@ -4,8 +4,8 @@ img {
     margin: 4px;
 }
 
-input {
-    display: none;
+#number{
+    width: 45px;
 }
 
 label {

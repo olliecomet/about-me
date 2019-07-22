@@ -11,7 +11,7 @@ const lossImage = document.getElementById('loss-image');
 const guesses = document.getElementById('guesses');
 
 // initialized states
-const correctNumber = 8;
+const correctNumber = Math.floor(Math.random() * 20) + 1;
 let tries = 4;
 
 guessButton.addEventListener('click', () => {
@@ -25,37 +25,39 @@ guessButton.addEventListener('click', () => {
         winOrLoss.textContent = ('You got it!');
 
         winImage.classList.remove('hidden');
+        tooHighLow.classList.add('hidden');
 
         guessButton.disabled = true;
     }
-    else if(result === -1) {
-        tooHighLow.textContent = ('Your guess was too low!');
-        
-        tries -= 1;
+    else if(result === -1 || result === 1) {
+        hotColdMessage(result);
 
-        guesses.textContent = (tries);
+        decreaseTries();
 
-        if(tries === 0) {
-            winOrLoss.textContent = ('You lost!');
-
-            lossImage.classList.remove('hidden');
-
-            guessButton.disabled = true;
-        }
+        failState();
     }
-    else if(result === 1) {
+});
+
+function failState() {
+    if(tries === 0) {
+        winOrLoss.textContent = ('You lost! The answer was: ' + correctNumber);
+
+        lossImage.classList.remove('hidden');
+
+        guessButton.disabled = true;
+    }
+}
+
+function decreaseTries() {
+    tries -= 1;
+
+    guesses.textContent = (tries);
+}
+
+function hotColdMessage(result) {
+    if(result === -1) {
+        tooHighLow.textContent = ('Your guess was too low!');
+    } else if(result === 1) {
         tooHighLow.textContent = ('Your guess was too high!');
-        
-        tries -= 1;
-
-        guesses.textContent = (tries);
-
-        if(tries === 0){
-            winOrLoss.textContent = ('You lost!');
-
-            lossImage.classList.remove('hidden');
-    
-            guessButton.disabled = true;
-        }
-    }  
-});    
+    }
+}
