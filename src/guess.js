@@ -38,26 +38,25 @@ guessButton.addEventListener('click', () => {
     }
 });
 
-function failState() {
-    if(tries === 0) {
-        winOrLoss.textContent = ('You lost! The answer was: ' + correctNumber);
-
-        lossImage.classList.remove('hidden');
-
-        guessButton.disabled = true;
+function hotColdMessage(result) {
+    if(result === -1) {
+        tooHighLow.textContent = ('Your guess was too low!');
+    } 
+    else if(result === 1) {
+        tooHighLow.textContent = ('Your guess was too high!');
     }
 }
 
 function decreaseTries() {
     tries -= 1;
-
     guesses.textContent = (tries);
 }
 
-function hotColdMessage(result) {
-    if(result === -1) {
-        tooHighLow.textContent = ('Your guess was too low!');
-    } else if(result === 1) {
-        tooHighLow.textContent = ('Your guess was too high!');
+function failState() {
+    if(tries === 0) {
+        winOrLoss.textContent = ('You lost! The answer was: ' + correctNumber);
+
+        lossImage.classList.remove('hidden');
+        guessButton.disabled = true;
     }
 }

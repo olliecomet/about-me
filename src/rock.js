@@ -44,6 +44,13 @@ button.addEventListener('click', () => {
     updateUI();
 });
 
+function stopIllegalBehavior(bet) {
+    if(bet > money) {
+        button.disabled = true;
+        alert('We know you\'re trying to cheat!');
+    }
+}
+
 function decideResult(handButton, hand) {
     if(handButton.value === hand) {
         record = 'draw';
@@ -59,7 +66,20 @@ function decideResult(handButton, hand) {
     }
 }
 
-// UI stuff
+function counter(bet) {
+    if(record === 'draw') {
+        draws++;
+    }
+    else if(record === 'won') {
+        wins++;
+        money += bet;
+    }
+    else if(record === 'lost') {
+        losses++;
+        money -= bet;
+    }
+}
+
 function updateUI() {
     if(record === 'draw') {
         message.textContent = 'It was a draw...';
@@ -79,27 +99,5 @@ function updateUI() {
             message.textContent += ' ...And you\'re broke!';
             button.disabled = true;
         }
-    }
-}
-
-// record stuff
-function counter(bet) {
-    if(record === 'draw') {
-        draws++;
-    }
-    else if(record === 'won') {
-        wins++;
-        money += bet;
-    }
-    else if(record === 'lost') {
-        losses++;
-        money -= bet;
-    }
-}
-
-function stopIllegalBehavior(bet) {
-    if(bet > money) {
-        button.disabled = true;
-        alert('We know you\'re trying to cheat!');
     }
 }
